@@ -65,6 +65,38 @@ Algunas veses queremos arrancar de cero con los containers, para esto podemos de
     docker container prune
     
     
+Algunos comandos interesante con respecto al docker que nos brinda información con respecto al consumo de cpu, tamaño etc
+
+    # el comando system df nos informa 
+    TYPE                TOTAL               ACTIVE              SIZE                RECLAIMABLE
+    Images              5                   1                   576MB               459.9MB (79%)
+    Containers          1                   1                   32.77kB             0B (0%)
+    Local Volumes       16                  0                   38.32MB             38.32MB (100%)
+    Build Cache         0                   0                   0B                  0B
+    
+    # otro comando interesante dentro de system es stats que nos brinda la información de consumo se cp como ejemplo
+    # listamos lso containers que estan lanzados
+    docker container ls
+    CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
+    1a27a05b5eab        100229ba687e        "sh -c 'java -jar /h…"   5 minutes ago       Up 5 minutes        0.0.0.0:5000->5000/tcp   hardcore_noether
+    
+    # con el comando stats nos brinda ls siguiente infomrmación ejemplo consumo cpu.
+    # recordar que podemos ingresar los cuatros primoros caracteres del id container para un container en especifico
+    docker stats 1a27
+    
+    CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT   MEM %               NET I/O             BLOCK I/O           PIDS
+    1a27a05b5eab        hardcore_noether    0.25%               252MiB / 8.332GiB   2.95%               14.8kB / 1.93kB     991kB / 0B          28
+    
+    # ingresando solamanet statas nos brinda la infomración de todos los contenedores lanzados
+    docker stats 
+    
+    CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+    dd0be7d603bf        modest_turing       0.00%               16.24MiB / 8.332GiB   0.19%               4.31kB / 0B         27.9MB / 0B         6
+    1a27a05b5eab        hardcore_noether    0.19%               252MiB / 8.332GiB     2.95%               14.8kB / 1.93kB     991kB / 0B          28
+
+    
+
+
     
  
     
