@@ -220,6 +220,41 @@ iniciarlos y apagarlos, etc. Es un componente fundamental para poder construir a
   </li>
 </ul>
 
+    # Eliminamos todas las imagenes conetenedores y network
+    docker system prune -a
     
+    # Lanzamos los servicios 
+    docker-compose up -d
+    
+    # Para ver la configuración del docker-compose el cual esta lanzado
+    docker-compose config
+    
+    # Ver las images creadas con docker-compose
+    docker-compose images
+    
+                 Container                        Repository                 Tag          Image Id      Size 
+    ---------------------------------------------------------------------------------------------------------
+    microservices_currency-conversion_1   in28min/currency-conversion   0.0.1-RELEASE   064d42f74ca3   151 MB
+    microservices_currency-exchange_1     in28min/currency-exchange     0.0.1-RELEASE   1ec056fbf00c   146 MB
 
+    
+    # docker-compose ps permite ver los contenedores funcionando.
+    docker-compose ps
 
+                   Name                              Command               State           Ports         
+    -----------------------------------------------------------------------------------------------------
+    microservices_currency-conversion_1   sh -c java $JAVA_OPTS -Dja ...   Up      0.0.0.0:8100->8100/tcp
+    microservices_currency-exchange_1     sh -c java $JAVA_OPTS -Dja ...   Up      0.0.0.0:8006->8000/tcp
+    
+    # una descripcion mas detallada de cada proceso
+    docker-compose top
+    
+    microservices_currency-conversion_1
+    UID     PID    PPID    C   STIME   TTY     TIME                                CMD                            
+    --------------------------------------------------------------------------------------------------------------
+    root   15344   15315   7   11:59   ?     00:01:15   java -Djava.security.egd=file:/dev/./urandom -jar /app.jar
+    
+    microservices_currency-exchange_1
+    UID     PID    PPID    C   STIME   TTY     TIME                                CMD                            
+    --------------------------------------------------------------------------------------------------------------
+    root   15206   15174   7   11:59   ?     00:01:16   java -Djava.security.egd=file:/dev/./urandom -jar /app.jar

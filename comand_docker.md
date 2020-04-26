@@ -94,3 +94,5 @@ docker push in28min/hello-world-python:0.0.1.RELEASE
 
 docker build -t in28min/hello-world-nodejs:0.0.1.RELEASE .
 docker push in28min/hello-world-nodejs:0.0.1.RELEASE
+
+https://docs.microsoft.com/en-us/azure/cognitive-services/containers/docker-compose-recipe
