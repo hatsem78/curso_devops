@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a87be7ef-916b-451b-9dbc-a36d1d3a40bd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comand_docker.md" beforeDir="false" afterPath="$PROJECT_DIR$/comand_docker.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +18,20 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="83">
-                <caret line="248" column="51" selection-start-line="248" selection-start-column="51" selection-end-line="248" selection-end-column="51" />
+              <first_editor relative-caret-position="360">
+                <caret line="462" column="28" selection-start-line="462" selection-start-column="28" selection-end-line="462" selection-end-column="28" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/devops-master-class/kubernetes/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="105">
+                <caret line="59" selection-start-line="59" selection-end-line="59" selection-end-column="78" />
               </first_editor>
               <second_editor />
             </state>
@@ -38,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/comand_docker.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="404">
+              <first_editor relative-caret-position="645">
                 <caret line="97" column="90" selection-start-line="97" selection-start-column="90" selection-end-line="97" selection-end-column="90" />
               </first_editor>
               <second_editor />
@@ -53,7 +66,15 @@
       <find>stop</find>
       <find>-r</find>
       <find>docker build</find>
+      <find>dummy_</find>
+      <find>kubectl get rs</find>
+      <find>kubectl get events --</find>
+      <find>LoadBalancer</find>
+      <find>create</find>
     </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -65,6 +86,7 @@
         <option value="$PROJECT_DIR$/devops-master-class/projects/hello-world/hello-world-python/launch.py" />
         <option value="$PROJECT_DIR$/devops-master-class/projects/microservices/docker-compose.yml" />
         <option value="$PROJECT_DIR$/comand_docker.md" />
+        <option value="$PROJECT_DIR$/devops-master-class/kubernetes/readme.md" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -96,14 +118,22 @@
               <item name="cursos" type="b2602c69:ProjectViewProjectNode" />
               <item name="cursos" type="462c0819:PsiDirectoryNode" />
               <item name="devops-master-class" type="462c0819:PsiDirectoryNode" />
-              <item name="projects" type="462c0819:PsiDirectoryNode" />
+              <item name="kubernetes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cursos" type="b2602c69:ProjectViewProjectNode" />
               <item name="cursos" type="462c0819:PsiDirectoryNode" />
               <item name="devops-master-class" type="462c0819:PsiDirectoryNode" />
-              <item name="projects" type="462c0819:PsiDirectoryNode" />
-              <item name="microservices" type="462c0819:PsiDirectoryNode" />
+              <item name="kubernetes" type="462c0819:PsiDirectoryNode" />
+              <item name="01-hello-world-rest-api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cursos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cursos" type="462c0819:PsiDirectoryNode" />
+              <item name="devops-master-class" type="462c0819:PsiDirectoryNode" />
+              <item name="kubernetes" type="462c0819:PsiDirectoryNode" />
+              <item name="01-hello-world-rest-api" type="462c0819:PsiDirectoryNode" />
+              <item name="backup" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -113,7 +143,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../trabajos/batch-python-quickstart" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -163,9 +193,9 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2496063" />
+      <window_info content_ui="combo" id="Project" order="1" weight="0.24940617" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.5471698" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.54598826" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="2" weight="0.32830188" />
       <window_info anchor="bottom" id="Message" order="3" />
@@ -258,6 +288,11 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/devops-master-class/kubernetes/01-hello-world-rest-api/backup/01-deployment-original.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-315" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/devops-master-class/projects/microservices/docker-compose.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -268,8 +303,18 @@
     <entry file="file://$PROJECT_DIR$/comand_docker.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="404">
+          <first_editor relative-caret-position="645">
             <caret line="97" column="90" selection-start-line="97" selection-start-column="90" selection-end-line="97" selection-end-column="90" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devops-master-class/kubernetes/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="105">
+            <caret line="59" selection-start-line="59" selection-end-line="59" selection-end-column="78" />
           </first_editor>
           <second_editor />
         </state>
@@ -278,8 +323,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="83">
-            <caret line="248" column="51" selection-start-line="248" selection-start-column="51" selection-end-line="248" selection-end-column="51" />
+          <first_editor relative-caret-position="360">
+            <caret line="462" column="28" selection-start-line="462" selection-start-column="28" selection-end-line="462" selection-end-column="28" />
           </first_editor>
           <second_editor />
         </state>
