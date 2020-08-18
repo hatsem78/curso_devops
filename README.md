@@ -474,7 +474,6 @@ API Server realiza todas las tareas administrativas en el nodo principal. Un usu
 
 ### Scheduler
 
-359/5000
 Después de eso, tenemos un programador. Entonces, como sugiere el nombre, el programador programa el trabajo en diferentes nodos trabajadores. Tiene la información de uso de recursos para cada nodo trabajador. El planificador también considera los requisitos de calidad del servicio, la ubicación de los datos y muchos otros parámetros similares. Luego, el programador programa el trabajo en términos de pods y servicios.
 
 
@@ -510,10 +509,82 @@ El kubelet se conecta al tiempo de ejecución del contenedor usando el marco gRP
 
 Kube-proxy se ejecuta en cada nodo trabajador como proxy de red. Escucha el servidor API para cada creación o eliminación de puntos de servicio. Para cada punto de servicio, kube-proxy establece las rutas para que pueda llegar a él.
 
+## Understand Kubernetes Rollouts
 
+Veamos algunos comandos para ver el historial de la implementación, y también para hacer reversiones y cosas
 
+    # El siguente comando es para ver el historial de un preyecto
+    kubectl rollout history deployment helloworld-rest-api
+    
+    deployment.extensions/hello-world-rest-api
+    REVISION  CHANGE-CAUSE
+    1         <none>
+    # en  este caso hubo una revisión del deployment
+    # Entonces, el comando es kubectl rollout .rollout no es más que una nueva versión. Por tanto, estamos analizando el historial de versiones de la implementación.
+    
+    
+    # Lo que debe hacer es cuando realmente hacemos una imagen establecida en la implementación.
+    
+    # Necesitamos agregar una opción simple llamada record = true.
+    
+    # ¿Como hacemos eso?
+    
+    # Entonces kubectl set.
+    
+    # Imagen Querríamos configurar la imagen para la implementación. ¿Qué despliegue? hola-mundo-resto-api, y dentro
+    
+    # el despliegue que contenedor?
+    
+    # ¿Queremos configurar la imagen? queremos ponerlo en el contenedor.
+    
+    kubectl set image deployment hello-world-rest-api hello-world-rest-api=in28min/hello-world-rest-api:0.0.3.RELEASE --record=true
+    
+    # hello-world-rest-api, y este contenedor nos gustaría configurarlo en una imagen específica en 28in / ...
+    
+    # hello-world-rest-api, y ¿cuál es la versión o cuál es la etiqueta que nos gustaría utilizar?
+    
+    # Hasta ahora hemos estado usando 0.0.1.RELEASE y 0.0.2.RELEASE.
 
+    # Así que ahora usemos 0.0.3.RELEASE.
+    
+    # Lo mas importante en cuanto a lo que estamos discutiendo ahora es contenido --record = true.
+    
+    # si ejecutamos nuevamente 
+    kubectl rollout history deployment hello-world-rest-api
+    
+    REVISION  CHANGE-CAUSE
+    1         <none>
+    2         kubectl set image deployment hello-world-rest-api hello-world-rest-api=in28min/hello-world-rest-api:0.0.3.RELEASE --record=true
 
+Algo muy importante que debemos preguntarnos para saber en donde estamos en este momento
 
+¿Qué implementación debería ser, y luego es hello-world-rest-api, y a qué revisión desea volver?
+Bien, para esto debemos ejecutar un comando de rolback que seria
+
+    # Entonces, ¿qué estamos haciendo aquí?
+    # Estamos usando el comando kubectl roll out y nos gustaría deshacer la implementación.    
+    # hello-world-rest-api, y querría volver a la revisión 1.
+    
+    kubectl rollout undo deployment hello-wolrd-rest-api --to-revision=1
+    
+    deployment.extensions/hello-world-rest-api rolled back
+    
+    kubectl rollout history deployment hello-world-rest-api
+    
+    REVISION  CHANGE-CAUSE
+    2         kubectl set image deployment hello-world-rest-api hello-world-rest-api=in28min/hello-world-rest-api:0.0.3.RELEASE --record=true
+    3         <none>
+    
+    # para v er los logs
+    kubectl get pods
+    
+    NAME                                    READY   STATUS    RESTARTS   AGE
+    hello-world-rest-api-6f58bf7f76-xgv27   1/1     Running   0          2m38s
+    
+    kubectl logs hello-world-rest-api-6f58bf7f76-xgv27
+    
+    # otra utilidad muy interesante para ver los log online
+    kubectl logs -f hello-world-rest-api-6f58bf7f76-xgv27
+    
     
     
